@@ -1,0 +1,16 @@
+{
+  "name": "glicol-npm-test",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.5"
+  },
+  "dependencies": {
+    "glicol": "^0.2.7"
+  }
+}
