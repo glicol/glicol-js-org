@@ -56,12 +56,6 @@
       <div class="flex items-center justify-end gap-2 pr-10"><GitHub /></div>
     </nav>
 
-    <!-- <div class="sm:invisible sm:hidden block visible"> -->
-
-    <!-- </div> -->
-    
-
-
     <div class="flex flex-col sm:flex-row">
 
 
@@ -107,14 +101,14 @@
       font-family: 'Inter', sans-serif;
       font-size: xx-large !important;
       font-weight: bold !important;
-      @apply py-4
+      @apply pb-6
     }
 
     h2 {
       font-family: 'Inter', sans-serif;
       font-size: x-large !important;
       font-weight: bold !important;
-      @apply py-4
+      @apply pb-4
     }
 
     h3 {
@@ -122,7 +116,7 @@
       font-size: large !important;
       font-weight: bold !important;
       font-style: italic !important;
-      @apply py-4
+      @apply pb-2
     }
 
     blockquote {
@@ -131,17 +125,17 @@
     }
 
     iframe {
-      @apply py-4 w-full
+      @apply pb-2 w-full
     }
 
     pre {
-      @apply bg-gray-100 px-4 py-2 w-full;
+      @apply bg-gray-100 px-4 pb-2 w-full;
     }
 
     p, a, blockquote {
       font-family: 'Inter', sans-serif;
       line-height: 1.8;
-      @apply py-2
+      @apply pb-2
       /* font-family: 'Inconsolata', monospace; */
     }
 
@@ -152,9 +146,5 @@
     code {
       font-size: 16px;
     }
-/* 
-    a {
-      font-family: 'Futura Md Bt', monospace;
-    } */
   }
 </style>
