@@ -2,23 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Glicol NPM Example</title>
-  </head>
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glicol</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  </head>
+
   <body>
-    <p>>> this is an example of glicol.js as an npm package</p>
-    >> <button id="run">run</button>
-    <p>>> button click will run `o: sin ${freq} >> mul ${amp}`</p>
-    <p>>> freq:</p>
-    <div>
-      >> <input type="range" min="20" max="2000" value="50" id="freq">
-    </div>
-    <p>>> amp:</p>
-    <div>
-      >> <input type="range" min="0" max="100" value="20" id="amp">
-    </div>
-    <p>>> the source code of this web app: <a href="https://github.com/glicol/glicol-npm-example">https://github.com/glicol/glicol-npm-example</a></p>
-    <p>>> learn more glicol syntax on <a href="https://glicol.org">https://glicol.org</a></p>
-    <p>>> technical detail on <a href="https://github.com/chaosprint/glicol/tree/main/js">https://github.com/chaosprint/glicol/tree/main/js</a></p>
-    <script type="module" src="/main.js"></script>
+    <div id="app"></div>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/chaosprint/glicol@v0.11.9/js/src/glicol.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/chaosprint/hydra-synth/dist/hydra-synth.min.js"></script> -->
+    <script type="module" src="/src/main.js"></script>
   </body>
+  <style>
+  </style>
 </html>
