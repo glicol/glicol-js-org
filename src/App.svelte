@@ -78,10 +78,19 @@
       
       <div class="flex sm:w-3/4 w-full items-center flex-col border-l-2 border-gray-100 sm:h-[calc(100vh-4rem)] overflow-y-scroll sm:overscroll-y-contain">
         <!-- <div class="sticky top-16 h-20 w-full bg-green-500">Don't scroll</div>h-[calc(100vh-rem)] overflow-y-scroll overscroll-y-contain -->
-        <div class="sm:max-w-3xl sm:px-10 w-full px-4 pb-10">
+        <div class="sm:max-w-3xl sm:px-10 w-full px-4 pb-10 overflow-hidden">
           <SvelteMarkdown {source} />
         </div>
       </div>
+
+      <div class="sm:invisible sm:hidden block visible flex flex-row justify-between w-full">
+				<div class="select w-full py-4 px-4">
+					<!-- <form> -->
+					<Select value={itemValue} items={docs} isSearchable={false} isClearable={false} on:select={handleSelect} on:clear={handleClear} ></Select>
+					<!-- </form> -->
+				</div>
+			</div>
+
     </div>
   </div>
 </div>
@@ -124,7 +133,7 @@
     }
 
     pre {
-      @apply bg-gray-100 px-4 pb-2 w-full;
+      @apply bg-gray-100 px-4 pb-2 w-full overflow-x-scroll overscroll-y-contain;
     }
 
     p, a, blockquote {
