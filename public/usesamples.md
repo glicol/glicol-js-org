@@ -1,6 +1,19 @@
 ## Samples
 
-There are some preloaded samples. Call `glicol.showAllSamples()` to see them in the console.
+By setting the `loadSamples` entry to `true`, you can get some automatically loaded samples.
+
+```
+import Glicol from 'glicol';
+import { seq } from 'glicol';
+
+const glicol = new Glicol({
+  loadSamples: true,
+});
+```
+
+Call `glicol.showAllSamples()` to see them in the console.
+
+### Sample playback
 
 You play samples by using the `sp` node (sample-playback).
 
