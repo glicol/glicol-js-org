@@ -2,7 +2,7 @@
 
 This is a light-weight, garbage-collection free, memory-safe and easy-to-use audio library for browsers. It's written in Rust and ported to JavaScript via `WebAssembly` and runs in `AudioWorklet` thread in browsers. The communication between the main thread and the audio thread is done with `SharedArrayBuffer`*.
 
-> * Without SAB, you can still use Glicol. However, to get the best audio performance, you need to have `cross-origin isolation` enabled on the web server (both the dev server and the one you deploy your web app) to use this package. For `Vite` dev server, you can use my plugin [here](https://github.com/chaosprint/vite-plugin-cross-origin-isolation). For deployment on `Netlify` or `Firebase`, check their docs for editing the header files. If you use a customised server, you have to figure it out yourself.
+> *Without SAB, you can still use Glicol. However, to get the best audio performance, you need to have `cross-origin isolation` enabled on the web server (both the dev server and the one you deploy your web app) to use this package. For `Vite` dev server, you can use my plugin [here](https://github.com/chaosprint/vite-plugin-cross-origin-isolation). For deployment on `Netlify` or `Firebase`, check their docs for editing the header files. If you use a customised server, you have to figure it out yourself.
 
 > It's recommanded to use `Vite` for developing music apps with Glicol. You can use it to create vanilla JS, Vue, React, Svelte project, with either JS or TS. It's way more faster than other tools and most of Glicol tests and demos are built with `Vite`.
 
