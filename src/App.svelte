@@ -47,8 +47,8 @@
   <div class="flex w-full flex-col">
 
     <nav class="sticky top-0 z-40 flex h-16 items-center justify-between bg-white py-4 border-b-2 border-gray-100">
-      <div class="flex items-center pl-10"><Logo /></div>
-      <div class="flex items-center pr-10"><GitHub /></div>
+      <div class="flex items-center sm:pl-10 pl-4"><Logo /></div>
+      <div class="flex items-center sm:pr-10 pr-4"><GitHub /></div>
     </nav>
 
     <div class="flex flex-col sm:flex-row">
@@ -133,13 +133,13 @@
     }
 
     pre {
-      @apply bg-gray-100 px-4 pb-2 w-full overflow-x-scroll overscroll-y-contain;
+      @apply bg-gray-100 px-4 py-2 w-full overflow-x-scroll overscroll-y-contain;
     }
 
     p, a, blockquote {
       font-family: 'Inter', sans-serif;
       line-height: 1.8;
-      @apply pb-2
+      @apply py-2
       /* font-family: 'Inconsolata', monospace; */
     }
 
