@@ -3,9 +3,9 @@
   import DocBody from './lib/DocBody.svelte';
 </script>
 
-
 <main>
 <Route path="/*" firstmatch>
+
   <Route path="/">
     <DocBody doc={"introduction"} />
   </Route>
@@ -17,9 +17,6 @@
 
 <style>
   @layer base {
-    li {
-      @apply hover:cursor-pointer  hover:text-blue-400 text-gray-500 py-2;
-    }
 
     h1 {
       font-family: 'Inter', sans-serif;
@@ -32,7 +29,7 @@
       font-family: 'Inter', sans-serif;
       font-size: x-large !important;
       font-weight: bold !important;
-      @apply pb-4 pt-10
+      @apply pb-4 sm:pt-10 pt-2
     }
 
     h3 {
