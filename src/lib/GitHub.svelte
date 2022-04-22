@@ -1,5 +1,5 @@
-<div class="w-24 text-center border-b-4 hover:border-red-400 border-white py-1 px-3">
-<a href="https://github.com/chaosprint/glicol" class="inline-block" target="_blank">GitHub<svg
+<div class="flex flex-col justify-center items-center w-24 text-center border-b-4 border-white hover:border-b-red-400">
+<a href="https://github.com/chaosprint/glicol" class="inline-block pt-2 pb-1" target="_blank">GitHub<svg
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true" 
     focusable="false"

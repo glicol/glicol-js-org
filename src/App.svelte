@@ -9,25 +9,16 @@
   const docs = ["introduction", "hellosound", "connection", "gui", "usesamples", "mixing", "adsr"]
 
 	onMount(async () => {
-    let doc = location.hash === "" ? "introduction" : location.hash.replace("#", "")
-    itemValue = doc;
-    const res = await fetch(`./${doc}.md`);
+    window.addEventListener('hashchange', async (e)=> {    
+      let doc = location.hash.replace("#", "");
+      itemValue = doc;
+      const res = await fetch(`./${doc}.md`);
+      source = await res.text();
+    })
+    let doc = location.hash === "" ? "" : location.hash.replace("#", "")
+    itemValue = doc === "" ? "introduction" : doc;
+    const res = await fetch(`./${itemValue}.md`);
     source = await res.text();
-
-    window.addEventListener('hashchange', async (e)=> {
-            
-            let doc = location.hash.replace("#", "");
-            itemValue = doc;
-            const res = await fetch(`./${doc}.md`);
-            source = await res.text();
-            // if (!titlelist.includes(a)) {
-            //     return {}
-            // }
-            // let g = guide[titlelist.indexOf(location.hash.replace("#", ""))]
-            // title = g.title
-            // text = g.text;
-            // code = g.code;
-        }) 
 	});
 
   const handleChange = async (docName) => {
@@ -37,9 +28,13 @@
   }
 
   const handleSelect = async (event) => {
-    location.hash = event.detail.value
-		const res = await fetch(`./${event.detail.value}.md`);
-		source = await res.text();
+    if (event.detail.value === "introduction") {
+      if (location.hash !== "") {
+        location.hash = event.detail.value
+      }
+    } else {
+      location.hash = event.detail.value
+    }
   }
 
   function handleClear() {
@@ -53,7 +48,7 @@
 
     <nav class="sticky top-0 z-40 flex h-16 items-center justify-between bg-white py-4 border-b-2 border-gray-100">
       <div class="flex items-center pl-10"><Logo /></div>
-      <div class="flex items-center justify-end gap-2 pr-10"><GitHub /></div>
+      <div class="flex items-center pr-10"><GitHub /></div>
     </nav>
 
     <div class="flex flex-col sm:flex-row">

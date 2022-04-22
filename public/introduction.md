@@ -23,7 +23,7 @@ For an audio library, to be GC-free is very meaningful. And to guarantee the mem
 
 Glicol audio engine has been proved to be working in live coding music performances in browsers, e.g.:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/atoTujbQdwI?start=187" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://youtu.be/atoTujbQdwI?t=7
 
 Rust is also famous for its error handling. `glicol.js` has taken advantage of that and offers a robust error handling mechanism. The principle is "Musique Non-Stop", i.e. when there is an error, it will be reported in the console while the music will continue as before.
 
