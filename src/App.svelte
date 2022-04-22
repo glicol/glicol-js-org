@@ -78,7 +78,7 @@
       
       <div class="flex sm:w-3/4 w-full items-center flex-col border-l-2 border-gray-100 sm:h-[calc(100vh-4rem)] overflow-y-scroll sm:overscroll-y-contain">
         <!-- <div class="sticky top-16 h-20 w-full bg-green-500">Don't scroll</div>h-[calc(100vh-rem)] overflow-y-scroll overscroll-y-contain -->
-        <div class="sm:max-w-3xl sm:px-10 w-full px-4 sm:pt-10 pb-10">
+        <div class="sm:max-w-3xl sm:px-10 w-full px-4 pb-10">
           <SvelteMarkdown {source} />
         </div>
       </div>
@@ -103,7 +103,7 @@
       font-family: 'Inter', sans-serif;
       font-size: x-large !important;
       font-weight: bold !important;
-      @apply pb-4
+      @apply pb-4 pt-10
     }
 
     h3 {

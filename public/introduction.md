@@ -1,4 +1,4 @@
-## What's this?
+## What's glicol.js?
 
 This is a light-weight, garbage-collection free, memory-safe and easy-to-use audio library for browsers. It's written in Rust and ported to JavaScript via `WebAssembly` and runs in `AudioWorklet` thread in browsers. The communication between the main thread and the audio thread is done with `SharedArrayBuffer`*.
 
