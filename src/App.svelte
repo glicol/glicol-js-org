@@ -134,7 +134,7 @@
     }
 
     pre {
-      @apply bg-gray-100 px-4 py-2 w-full overflow-x-scroll overscroll-y-contain;
+      @apply bg-gray-100 px-4 py-2 w-full overflow-x-scroll overscroll-y-auto;
     }
 
     p, a, blockquote {
