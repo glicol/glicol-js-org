@@ -35,6 +35,7 @@
     } else {
       location.hash = event.detail.value
     }
+    window.scrollTo({ top: 0 });
   }
 
   function handleClear() {
