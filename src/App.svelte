@@ -121,7 +121,7 @@
       font-size: large !important;
       font-weight: bold !important;
       font-style: italic !important;
-      @apply pb-2
+      @apply pt-2
     }
 
     blockquote {
