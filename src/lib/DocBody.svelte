@@ -84,9 +84,6 @@
                 {#if doc==="hellosound"}
                 <HelloSound />
                 {/if}
-                {#if doc==="hellosound"}
-                <HelloSound />
-                {/if}
                 {#if doc==="connection"}
                 <Connection />
                 {/if}
