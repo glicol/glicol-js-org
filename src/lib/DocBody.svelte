@@ -10,31 +10,14 @@
     import UseSamples from "../md/usesamples.md";
     import Mixing from "../md/mixing.md";
     import ADSR from "../md/adsr.md";
+    import Extension from "../md/extension.md";
+    import DSL from "../md/dsl.md";
 
     export let doc;
     // console.log(doc)
-    const docs = ["introduction", "hellosound", "connection", "gui", "usesamples", "mixing", "adsr"]
-
-    let width = window.innerWidth;
-    function reportWindowSize() {
-        width = window.innerWidth
-    }
-
-    window.addEventListener('resize', reportWindowSize);
-
+    const docs = ["introduction", "hellosound", "connection", "gui", "usesamples", "mixing", "adsr", "dsl", "extension"]
     const handleSelect = async (event) => {
         doc = event.detail.value
-        // console.log(event)
-        // let goal = doc === "introduction" ? "" : doc
-        // if (window.history.replaceState) {
-            //prevents browser from storing history with each change:
-            // history.replaceState({}, null, "./"+doc);
-        // }
-        // if (event.detail.value === "introduction") {
-        //     document.location.href = `.`
-        // } else {
-        //     document.location.href = `./${event.detail.value}`;
-        // }
         window.scrollTo({ top: 0 });
     }
     
@@ -64,51 +47,38 @@
               <li><a class={`${doc==="usesamples"?"text-blue-400":"text-gray-500"}`} href="/usesamples">Use samples</a></li>
               <li><a class={`${doc==="mixing"?"text-blue-400":"text-gray-500"}`} href="/mixing">Mixing</a></li>
               <li><a class={`${doc==="adsr"?"text-blue-400":"text-gray-500"}`} href="/adsr">ADSR Envlope</a></li>
+              <li><a class={`${doc==="dsl"?"text-blue-400":"text-gray-500"}`} href="/dsl">Use the DSL</a></li>
+              <li><a class={`${doc==="extension"?"text-blue-400":"text-gray-500"}`} href="/extension">Extension</a></li>
             </ul>
           </div>
         </div>
   
-        {#if width < 640}
         <div class="sm:invisible sm:hidden block visible flex flex-row justify-between w-full">
             <div class="select w-full py-4 px-4">
                 <Select value={doc} items={docs} isSearchable={false} isClearable={false} on:select={handleSelect} on:clear={handleClear} ></Select>
             </div>
         </div>
-        {/if}
 
         <div class="flex sm:w-3/4 w-full items-center flex-col border-l-2 border-gray-100 sm:h-[calc(100vh-4rem)]  overflow-x-auto overflow-y-scroll sm:overscroll-y-contain">
             <div class="sm:max-w-3xl sm:px-10 w-full px-4 pb-10">
-                {#if doc==="introduction"}
-                <Introduction />
-                {/if}
-                {#if doc==="hellosound"}
-                <HelloSound />
-                {/if}
-                {#if doc==="connection"}
-                <Connection />
-                {/if}
-                {#if doc==="gui"}
-                <GUI />
-                {/if}
-                {#if doc==="usesamples"}
-                <UseSamples />
-                {/if}
-                {#if doc==="mixing"}
-                <Mixing />
-                {/if}
-                {#if doc==="adsr"}
-                <ADSR />
-                {/if}
+
+                {#if doc==="introduction"}<Introduction />{/if}
+                {#if doc==="hellosound"}<HelloSound />{/if}
+                {#if doc==="connection"}<Connection />{/if}
+                {#if doc==="gui"}<GUI />{/if}
+                {#if doc==="usesamples"}<UseSamples />{/if}
+                {#if doc==="mixing"}<Mixing />{/if}
+                {#if doc==="adsr"}<ADSR />{/if}
+                {#if doc==="dsl"}<DSL />{/if}
+                {#if doc==="extension"}<Extension />{/if}
             </div>
         </div>
 
-        {#if width < 640}
         <div class="sm:invisible sm:hidden block visible flex flex-row justify-between w-full">
             <div class="select w-full py-4 px-4">
                 <Select value={doc} items={docs} isSearchable={false} isClearable={false} on:select={handleSelect} on:clear={handleClear} ></Select>
             </div>
         </div>
-        {/if}
 
         </div>
     </div>
