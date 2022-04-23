@@ -1,8 +1,7 @@
 {
-  "name": "pnpm-vite-svelte-windicss",
+  "name": "glicol-js-org",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,7 +16,6 @@
     "windicss": "^3.5.1"
   },
   "dependencies": {
-    "svelte-markdown": "^0.2.2",
     "svelte-select": "^4.4.7",
     "tinro": "^0.6.12"
   }

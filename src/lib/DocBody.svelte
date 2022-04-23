@@ -2,7 +2,6 @@
     import GitHub from './GitHub.svelte'
     import Logo from './Logo.svelte'
     import Select from 'svelte-select';
-    // import SvelteMarkdown from 'svelte-markdown'
     import Introduction from "../md/introduction.md";
     import HelloSound from "../md/hellosound.md";
     import Connection from "../md/connection.md";
@@ -28,15 +27,13 @@
 
 <div class="flex justify-center bg-white">
     <div class="flex w-full flex-col">
-    
         <nav class="sticky top-0 z-40 flex h-16 items-center justify-between bg-white py-4 border-b-2 border-gray-100">
             <div class="flex items-center sm:pl-10 pl-4"><Logo /></div>
             <div class="flex items-center sm:pr-10 pr-4"><GitHub /></div>
         </nav>
-    
+
         <div class="flex flex-col sm:flex-row">
-    
-  
+
         <div class="sm:block sm:visible hidden invisible sticky sm:w-1/4 h-[calc(100vh-4rem)] bg-white overflow-y-scroll sm:overscroll-y-contain">
           <div class="pl-10 pt-10 text-lg ">
             <ul>

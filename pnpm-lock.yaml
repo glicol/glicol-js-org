@@ -3,7 +3,6 @@ lockfileVersion: 5.3
 specifiers:
   '@sveltejs/vite-plugin-svelte': ^1.0.0-next.30
   svelte: ^3.44.0
-  svelte-markdown: ^0.2.2
   svelte-select: ^4.4.7
   tinro: ^0.6.12
   vite: ^2.9.0
@@ -12,7 +11,6 @@ specifiers:
   windicss: ^3.5.1
 
 dependencies:
-  svelte-markdown: 0.2.2_svelte@3.46.6
   svelte-select: 4.4.7
   tinro: 0.6.12
 
@@ -80,10 +78,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@types/marked/4.0.3:
-    resolution: {integrity: sha512-HnMWQkLJEf/PnxZIfbm0yGJRRZYYMhb++O9M36UCTA9z53uPvVoSlAwJr3XOpDEryb7Hwl1qAx/MV6YIW1RXxg==}
-    dev: false
 
   /@windicss/config/1.8.3:
     resolution: {integrity: sha512-1fvfZhRD7WfV/Xh6uIAYKIdbQWrwEgSdkFlHiLPzMDS44KjwNZILDzLAz9Y2W5H2K4MLGgGMnzGS89ECyjc0Ww==}
@@ -512,12 +506,6 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
-  /marked/4.0.14:
-    resolution: {integrity: sha512-HL5sSPE/LP6U9qKgngIIPTthuxC0jrfxpYMZ3LdGDD3vTnLs59m2Z7r6+LNDR3ToqEQdkKd6YaaEfJhodJmijQ==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    dev: false
-
   /mdurl/1.0.1:
     resolution: {integrity: sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=}
     dev: true
@@ -638,16 +626,6 @@ packages:
     dependencies:
       svelte: 3.46.6
     dev: true
-
-  /svelte-markdown/0.2.2_svelte@3.46.6:
-    resolution: {integrity: sha512-bNxpG3gRbC2UjAFakIMcLEzVq5db2Md57aeU4wKCuffSfD6f7RkvtYDqbrAk2ycC55t3wykOy0E7KDuvVKyDYA==}
-    peerDependencies:
-      svelte: ^3.0.0
-    dependencies:
-      '@types/marked': 4.0.3
-      marked: 4.0.14
-      svelte: 3.46.6
-    dev: false
 
   /svelte-select/4.4.7:
     resolution: {integrity: sha512-fIf9Z8rPI6F8naHZ9wjXT0Pv5gLyhdHAFkHFJnCfVVfELE8e82uOoF0xEVQP6Kir+b4Q5yOvNAzZ61WbSU6A0A==}
