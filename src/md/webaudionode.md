@@ -1,4 +1,4 @@
-## Extension
+## As a Web Audio Node
 
 You can provide an `audioContext` to glicol and use the output of glicol to another node from that `audioContext`:
 

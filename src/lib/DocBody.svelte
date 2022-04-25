@@ -9,12 +9,12 @@
     import UseSamples from "../md/usesamples.md";
     import Mixing from "../md/mixing.md";
     import ADSR from "../md/adsr.md";
-    import Extension from "../md/extension.md";
+    import AsWebAudioNode from "../md/webaudionode.md";
     import DSL from "../md/dsl.md";
 
     export let doc;
     // console.log(doc)
-    const docs = ["introduction", "hellosound", "connection", "gui", "usesamples", "mixing", "adsr", "dsl", "extension"]
+    const docs = ["introduction", "hellosound", "connection", "gui", "usesamples", "mixing", "adsr", "dsl", "webaudionode"]
     const handleSelect = async (event) => {
         doc = event.detail.value
         window.scrollTo({ top: 0 });
@@ -45,7 +45,7 @@
               <li class="list"><a class={`${doc==="mixing"?"text-blue-400":"text-gray-500"}`} href="/mixing">Mixing</a></li>
               <li class="list"><a class={`${doc==="adsr"?"text-blue-400":"text-gray-500"}`} href="/adsr">ADSR Envlope</a></li>
               <li class="list"><a class={`${doc==="dsl"?"text-blue-400":"text-gray-500"}`} href="/dsl">Use the DSL</a></li>
-              <li class="list"><a class={`${doc==="extension"?"text-blue-400":"text-gray-500"}`} href="/extension">Extension</a></li>
+              <li class="list"><a class={`${doc==="webaudionode"?"text-blue-400":"text-gray-500"}`} href="/webaudionode">As Web Audio Node</a></li>
             </ul>
           </div>
         </div>
@@ -67,15 +67,34 @@
                 {#if doc==="mixing"}<Mixing />{/if}
                 {#if doc==="adsr"}<ADSR />{/if}
                 {#if doc==="dsl"}<DSL />{/if}
-                {#if doc==="extension"}<Extension />{/if}
+                {#if doc==="webaudionode"}<AsWebAudioNode />{/if}
+                <div class="block visible flex flex-row justify-between w-full py-4">
+                    <a href={`./${ docs[ (docs.indexOf(doc)+docs.length-1) % docs.length ] }`} style={``}>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                          </svg>
+                    </a>
+                    <a href={`./${ docs[ (docs.indexOf(doc)+1) % docs.length ] }`}>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
             </div>
+
         </div>
 
-        <div class="sm:invisible sm:hidden block visible flex flex-row justify-between w-full">
-            <div class="select w-full py-4 px-4">
+        <!-- <div class="w-full">
+            <div></div>
+        </div> -->
+        <!-- sm:invisible sm:hidden  -->
+        <!-- <div class="justify-between w-full"> -->
+            <!-- <div class="select w-full py-4 px-4">
                 <Select value={doc} items={docs} isSearchable={false} isClearable={false} on:select={handleSelect} on:clear={handleClear} ></Select>
-            </div>
-        </div>
+            </div> -->
+            <!-- <div>Left</div> -->
+            <!-- <div>Right</div> -->
+        <!-- </div> -->
 
         </div>
     </div>
