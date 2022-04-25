@@ -65,3 +65,5 @@ A lighter way to do it is to write:
 // chain "o", node_index 0, param 0, set to 110
 glicol.sendMsg(`o, 0, 0, 110`)
 ```
+
+You can find more examples in the following pages.
