@@ -2,17 +2,22 @@
 
 Glicol.js is the audio engine of [Glicol computer music language](https://glicol.org) ported from Rust to JavaScript as an NPM package.
 
-Advantages:
+### Advantages
 
 - A super light-weight package (Glicol.js is 2MB whereas Tone.js is 11MB).
-- Top-level audio performance: do any heavy stuff on main thread; no garbage-collection in audio thread; no memory leaking.
-- Write much less code for the audio graph/node in the what-you-see-is-what-you-get (declarative) style. You will see more on this next.
+
+- Ceiling-level audio performance in browsers: do any heavy stuff on main thread without influencing the audio; no garbage-collection in audio thread; no memory leaking.
+
+- Write much less code with the what-you-see-is-what-you-get (declarative) style. You will see more about this next.
+
 - Robust error-handling from Rust; no need to do try-catch.
 
-Some requirement/limitation:
+### Some requirement/limitation
 
 - The browsers need to reletively new (see https://caniuse.com/?search=audioworklet). So, if you want to support older version, this tool is not for you, at least for now.
+
 - It's recommanded to use [Vite](https://vitejs.dev/) for developing music apps with Glicol. You can use it to create vanilla JS, Vue, React, Svelte project, with either JS or TS. It's way more faster than other tools and most of Glicol tests and demos are built with Vite.
+
 - To get the best audio performance, you need to have `cross-origin isolation` enabled on the web server (both the dev server and the one you deploy your web app) to use this package. For `Vite` dev server, you can use my plugin [here](https://github.com/chaosprint/vite-plugin-cross-origin-isolation). For deployment on `Netlify` or `Firebase`, check their docs for editing the header files. If you use a customised server, you have to figure it out yourself.
 
 In short, Glicol.js offers the ceiling-level audio performance in browsers, with robust memory-safety control and you will have a smooth coding experience. As trade-offs, it doesn't support old browsers for now and to get best of it, we recommand you use Vite and enable CORS for your dev and deployment server.
@@ -37,19 +42,9 @@ glicol.play({
 
 Simple as that.
 
-No need to create a node, and then connect it everywhere.
+Note that there are two `chains` here, one is called `o` and the other is `~am`. Only the chains without a `~` in their names will be sent to the output destination.
 
-Note that there are two `chains` here, one is called `o` and the other is `~am`.
-
-Only the chains without a `~` in their names will be sent to the output destination.
-
-Therefore, it's very intuitive to seperate the modulator, although everything is working at audio rate*.
-
-> *Glicol is an audio-first domain specific language.
-
-Wanna some change/update?
-
-Just call:
+Wanna some change/update? Just call:
 
 ```js
 glicol.play({

@@ -65,7 +65,12 @@
     }
 
     code {
-      font-size: 16px;
+      font-size: 14px !important;
+    }
+  }
+  @layer utilities {
+    ul {
+        @apply list-disc px-4 sm:px-8
     }
   }
 </style>

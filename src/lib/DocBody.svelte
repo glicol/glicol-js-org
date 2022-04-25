@@ -36,16 +36,16 @@
 
         <div class="sm:block sm:visible hidden invisible sticky sm:w-1/4 h-[calc(100vh-4rem)] bg-white overflow-y-scroll sm:overscroll-y-contain">
           <div class="pl-10 pt-10 text-lg ">
-            <ul>
-              <li><a class={`${doc==="introduction"?"text-blue-400":"text-gray-500"}`} href="/">Introduction</a></li>
-              <li><a class={`${doc==="hellosound"?"text-blue-400":"text-gray-500"}`} href="/hellosound">Hello sound</a></li>
-              <li><a class={`${doc==="connection"?"text-blue-400":"text-gray-500"}`} href="/connection">Basic connection</a></li>
-              <li><a class={`${doc==="gui"?"text-blue-400":"text-gray-500"}`} href="/gui">GUI</a></li>
-              <li><a class={`${doc==="usesamples"?"text-blue-400":"text-gray-500"}`} href="/usesamples">Use samples</a></li>
-              <li><a class={`${doc==="mixing"?"text-blue-400":"text-gray-500"}`} href="/mixing">Mixing</a></li>
-              <li><a class={`${doc==="adsr"?"text-blue-400":"text-gray-500"}`} href="/adsr">ADSR Envlope</a></li>
-              <li><a class={`${doc==="dsl"?"text-blue-400":"text-gray-500"}`} href="/dsl">Use the DSL</a></li>
-              <li><a class={`${doc==="extension"?"text-blue-400":"text-gray-500"}`} href="/extension">Extension</a></li>
+            <ul class="">
+              <li class="list"><a class={`${doc==="introduction"?"text-blue-400":"text-gray-500"}`} href="/">Introduction</a></li>
+              <li class="list"><a class={`${doc==="hellosound"?"text-blue-400":"text-gray-500"}`} href="/hellosound">Hello sound</a></li>
+              <li class="list"><a class={`${doc==="connection"?"text-blue-400":"text-gray-500"}`} href="/connection">Basic connection</a></li>
+              <li class="list"><a class={`${doc==="gui"?"text-blue-400":"text-gray-500"}`} href="/gui">GUI</a></li>
+              <li class="list"><a class={`${doc==="usesamples"?"text-blue-400":"text-gray-500"}`} href="/usesamples">Use samples</a></li>
+              <li class="list"><a class={`${doc==="mixing"?"text-blue-400":"text-gray-500"}`} href="/mixing">Mixing</a></li>
+              <li class="list"><a class={`${doc==="adsr"?"text-blue-400":"text-gray-500"}`} href="/adsr">ADSR Envlope</a></li>
+              <li class="list"><a class={`${doc==="dsl"?"text-blue-400":"text-gray-500"}`} href="/dsl">Use the DSL</a></li>
+              <li class="list"><a class={`${doc==="extension"?"text-blue-400":"text-gray-500"}`} href="/extension">Extension</a></li>
             </ul>
           </div>
         </div>
@@ -83,6 +83,11 @@
 
 <style>
     li {
-      @apply hover:cursor-pointer hover:text-blue-400 text-gray-500 py-2;
+        @apply hover:cursor-pointer hover:text-blue-400 text-gray-500 py-2 list-none px-0;
     };
+
+    ul {
+        @apply px-0
+    }
+
 </style>
