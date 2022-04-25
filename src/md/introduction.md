@@ -22,6 +22,8 @@ Glicol.js is the audio engine of [Glicol computer music language](https://glicol
 
 In short, Glicol.js offers the ceiling-level audio performance in browsers, with robust memory-safety control and you will have a smooth coding experience. As trade-offs, it doesn't support old browsers for now and to get best of it, we recommand you use Vite and enable CORS for your dev and deployment server.
 
+> Glicol.js is a work in progress. There are more features, more examples, and more effects coming before the Web Audio Conference 2022.
+
 ## Get started
 
 After you `npm i glicol`, you can just write:
