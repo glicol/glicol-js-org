@@ -1,21 +1,25 @@
 ## What's glicol.js?
 
-This is a light-weight, garbage-collection free, memory-safe and easy-to-use audio library for browsers. It's written in Rust and ported to JavaScript via `WebAssembly` and runs in `AudioWorklet` thread in browsers. The communication between the main thread and the audio thread is done with `SharedArrayBuffer`*.
+Glicol.js is the audio engine of [Glicol computer music language](https://glicol.org) ported from Rust to JavaScript as an NPM package.
 
-> *Without SAB, you can still use Glicol. However, to get the best audio performance, you need to have `cross-origin isolation` enabled on the web server (both the dev server and the one you deploy your web app) to use this package. For `Vite` dev server, you can use my plugin [here](https://github.com/chaosprint/vite-plugin-cross-origin-isolation). For deployment on `Netlify` or `Firebase`, check their docs for editing the header files. If you use a customised server, you have to figure it out yourself.
+Advantages:
 
-> It's recommanded to use `Vite` for developing music apps with Glicol. You can use it to create vanilla JS, Vue, React, Svelte project, with either JS or TS. It's way more faster than other tools and most of Glicol tests and demos are built with `Vite`.
+- A super light-weight package (Glicol.js is 2MB whereas Tone.js is 11MB).
+- Top-level audio performance: do any heavy stuff on main thread; no garbage-collection in audio thread; no memory leaking.
+- Write much less code for the audio graph/node in the what-you-see-is-what-you-get (declarative) style. You will see more on this next.
+- Robust error-handling from Rust; no need to do try-catch.
 
-## Why glicol.js?
+Some requirement/limitation:
 
-### Light-weight
-`glicol.js` is only 2.1 MB whereas `tone.js` is 11.3 MB. This means that you can save more bandwidth and increase the loading speed for your web app.
+- The browsers need to reletively new (see https://caniuse.com/?search=audioworklet). So, if you want to support older version, this tool is not for you, at least for now.
+- It's recommanded to use [Vite](https://vitejs.dev/) for developing music apps with Glicol. You can use it to create vanilla JS, Vue, React, Svelte project, with either JS or TS. It's way more faster than other tools and most of Glicol tests and demos are built with Vite.
+- To get the best audio performance, you need to have `cross-origin isolation` enabled on the web server (both the dev server and the one you deploy your web app) to use this package. For `Vite` dev server, you can use my plugin [here](https://github.com/chaosprint/vite-plugin-cross-origin-isolation). For deployment on `Netlify` or `Firebase`, check their docs for editing the header files. If you use a customised server, you have to figure it out yourself.
 
-> It's possible to make it even smaller in the future by using only a module of Glicol.
+In short, Glicol.js offers the ceiling-level audio performance in browsers, with robust memory-safety control and you will have a smooth coding experience. As trade-offs, it doesn't support old browsers for now and to get best of it, we recommand you use Vite and enable CORS for your dev and deployment server.
 
-### Easy to use
+## Get started
 
-With the top-level audio performance in the browser, Glicol is yet easy to use. The balance between minimalism and readability/ergonomics is consistent in the API designing. After you `npm i glicol`, you can just write:
+After you `npm i glicol`, you can just write:
 
 ```js
 import Glicol from "glicol"
@@ -56,7 +60,7 @@ glicol.play({
 
 The engine will analyse the difference and only update those nodes modified.
 
-> As this is not a stable version yet, the APIs may significantly change in the future. If you wish to test or use it in a project, please contact me.
+> This is the key for the what-you-see-if-what-you-get style. We have done the hard work on the engine so you don't have to manually manage all the nodes and connect them everywhere.
 
 A lighter way to do it is to write:
 
@@ -64,26 +68,3 @@ A lighter way to do it is to write:
 // chain "o", node_index 0, param 0, set to 110
 glicol.sendMsg(`o, 0, 0, 110`)
 ```
-
-### Garbage-collection free on audio and memory-safe
-
-Glicol audio engine is written in Rust, a system-level programming language that is widely seen as the modern alternative to C/C++ and is used in many scenarios that require the top-level performance.
-
-For an audio library, to be GC-free is very meaningful. And to guarantee the memory-safety is even more important for many musical contexts such as live performances.
-
-> A negative example is memory leaking, which will look fine at the first glance, but when as the time goes by, say 20 minutes, the memory issue will ruin the whole thing.
-
-Glicol audio engine has been proved to be working in live coding music performances in browsers, e.g.:
-
-https://youtu.be/atoTujbQdwI?t=7
-
-Rust is also famous for its error handling. `glicol.js` has taken advantage of that and offers a robust error handling mechanism. The principle is "Musique Non-Stop", i.e. when there is an error, it will be reported in the console while the music will continue as before.
-
-
-## Feedback
-
-There are many todos for this package. Please let me know your thoughts and suggestions here:
-
-https://github.com/chaosprint/glicol
-
-`Issues` or `Discussion` are both fine.
