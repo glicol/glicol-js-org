@@ -17,13 +17,14 @@
 
     export let doc;
     afterUpdate(()=>{
+        window.scrollTo({ top: 0 });
         Prism.highlightAll()
     })
     // console.log(doc)
     const docs = ["introduction", "hellosound", "connection", "gui", "usesamples", "mixing", "adsr", "dsl", "webaudionode"]
+    
     const handleSelect = async (event) => {
         doc = event.detail.value
-        window.scrollTo({ top: 0 });
     }
     
     function handleClear() {
