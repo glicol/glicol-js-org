@@ -4,7 +4,7 @@ The idea of Glicol is to connect different nodes like playing synth modules.
 
 In JavaScript, it's quite intuitive to do it by using the `.` connector.
 
-```js
+```javascript
 import Glicol from 'glicol';
 import { sin } from 'glicol';
 

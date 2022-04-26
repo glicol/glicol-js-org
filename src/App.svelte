@@ -1,6 +1,13 @@
 <script>
   import { Route } from "tinro";
   import DocBody from './lib/DocBody.svelte';
+
+  // first, find all the div.code blocks
+  // console.log(hljs)
+  // document.querySelectorAll('code').forEach(el => {
+  //   // then highlight each
+  //   hljs.highlightElement(el);
+  // });
 </script>
 
 <main>

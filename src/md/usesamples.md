@@ -2,7 +2,7 @@
 
 By setting the `loadSamples` entry to `true`, you can get some automatically loaded samples.
 
-```
+```js
 import Glicol from 'glicol';
 import { seq } from 'glicol';
 

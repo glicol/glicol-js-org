@@ -1,7 +1,10 @@
 <script>
+    import { afterUpdate, beforeUpdate } from 'svelte';
     import GitHub from './GitHub.svelte'
     import Logo from './Logo.svelte'
+    
     import Select from 'svelte-select';
+
     import Introduction from "../md/introduction.md";
     import HelloSound from "../md/hellosound.md";
     import Connection from "../md/connection.md";
@@ -13,6 +16,9 @@
     import DSL from "../md/dsl.md";
 
     export let doc;
+    afterUpdate(()=>{
+        Prism.highlightAll()
+    })
     // console.log(doc)
     const docs = ["introduction", "hellosound", "connection", "gui", "usesamples", "mixing", "adsr", "dsl", "webaudionode"]
     const handleSelect = async (event) => {

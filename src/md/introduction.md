@@ -48,7 +48,7 @@ Note that there are two `chains` here, one is called `o` and the other is `~am`.
 
 Wanna some change/update? Just call:
 
-```js
+```javascript
 glicol.play({
     "o": sin(110).mul("~am"),
     "~am": sin(0.2).mul(0.3).add(0.5)
@@ -61,7 +61,7 @@ The engine will analyse the difference and only update those nodes modified.
 
 A lighter way to do it is to write:
 
-```js
+```javascript
 // chain "o", node_index 0, param 0, set to 110
 glicol.sendMsg(`o, 0, 0, 110`)
 ```
