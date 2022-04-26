@@ -23,7 +23,11 @@
 </main>
 
 <style>
-  @layer base {
+  @layer utilities {
+
+    p, a, h1, h2, h3 {
+      @apply text-gray-800;
+    }
 
     h1 {
       font-family: 'Inter', sans-serif;
@@ -60,24 +64,28 @@
       @apply bg-gray-100 px-4 py-2 w-full overflow-x-scroll overscroll-y-auto;
     }
 
-    p, a, blockquote {
+    p, blockquote {
       font-family: 'Inter', sans-serif;
       line-height: 1.8;
       @apply py-2
       /* font-family: 'Inconsolata', monospace; */
     }
-
-    ul, a {
-      font-size: 14px;
-    }
-
-    code {
-      font-size: 14px !important;
-    }
-  }
-  @layer utilities {
+  
     ul {
+        font-size: 14px;
         @apply list-disc px-4 sm:px-8
+    }
+
+    a {
+      font-family: 'Inter', sans-serif;
+      @apply  text-gray-900;
+    }
+    code {
+      /* @apply px-2; */
+      font-family: 'Fira Code', monospace;
+      @apply bg-gray-100 text-gray-900;
+      /* font-family: 'Inter', sans-serif; */
+      /* font-size: 16px !important; */
     }
   }
 </style>

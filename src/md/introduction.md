@@ -1,6 +1,6 @@
 ## What's glicol.js?
 
-Glicol.js is the audio engine of [Glicol computer music language](https://glicol.org) ported from Rust to JavaScript as an NPM package.
+Glicol.js is the audio engine of [`Glicol computer music language`](https://glicol.org) ported from Rust to JavaScript as an NPM package.
 
 ### Advantages
 
