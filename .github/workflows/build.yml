@@ -52,6 +52,7 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git clone --depth=1 --branch=gh-pages https://github.com/${{ github.repository }} gh-pages
           rsync -av --delete .vitepress/dist/ gh-pages/
+          echo "glicol.js.org" > gh-pages/CNAME  # Add CNAME file
           cd gh-pages
           git add --all
           git commit -m "Deploy to GitHub Pages"
