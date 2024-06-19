@@ -14,9 +14,9 @@ Glicol.js is the audio engine of [`Glicol computer music language`](https://glic
 
 ### Some requirement/limitation
 
-- The browsers need to reletively new (see https://caniuse.com/?search=audioworklet). So, if you want to support older version, this tool is not for you, at least for now.
+- The browsers need to relatively new (see https://caniuse.com/?search=audioworklet). So, if you want to support older version, this tool is not for you, at least for now.
 
-- It's recommanded to use [Vite](https://vitejs.dev/) for developing music apps with Glicol. You can use it to create vanilla JS, Vue, React, Svelte project, with either JS or TS. It's way more faster than other tools and most of Glicol tests and demos are built with Vite.
+- It's recommended to use [Vite](https://vitejs.dev/) for developing music apps with Glicol. You can use it to create vanilla JS, Vue, React, Svelte project, with either JS or TS. It's way more faster than other tools and most of Glicol tests and demos are built with Vite.
 
 - To get the best audio performance, you need to have `cross-origin isolation` enabled on the web server (both the dev server and the one you deploy your web app) to use this package. For `Vite` dev server, you can use my plugin [here](https://github.com/chaosprint/vite-plugin-cross-origin-isolation). For deployment on `Netlify` or `Firebase`, check their docs for editing the header files. If you use a customised server, you have to figure it out yourself.
 
@@ -29,17 +29,17 @@ In short, Glicol.js offers the ceiling-level audio performance in browsers, with
 After you `npm i glicol`, you can just write:
 
 ```js
-import Glicol from "glicol"
-const glicol = new Glicol()
+import Glicol from "glicol";
+const glicol = new Glicol();
 ```
 
 Then write the graph in a declarative style:
 
 ```js
 glicol.play({
-    "o": sin(440).mul("~am"),
-    "~am": sin(0.2).mul(0.3).add(0.5)
-})
+  o: sin(440).mul("~am"),
+  "~am": sin(0.2).mul(0.3).add(0.5),
+});
 ```
 
 Simple as that.
@@ -50,9 +50,9 @@ Wanna some change/update? Just call:
 
 ```javascript
 glicol.play({
-    "o": sin(110).mul("~am"),
-    "~am": sin(0.2).mul(0.3).add(0.5)
-})
+  o: sin(110).mul("~am"),
+  "~am": sin(0.2).mul(0.3).add(0.5),
+});
 ```
 
 The engine will analyse the difference and only update those nodes modified.
@@ -63,7 +63,7 @@ A lighter way to do it is to write:
 
 ```javascript
 // chain "o", node_index 0, param 0, set to 110
-glicol.sendMsg(`o, 0, 0, 110`)
+glicol.sendMsg(`o, 0, 0, 110`);
 ```
 
 You can find more examples in the following pages.
