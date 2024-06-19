@@ -37,9 +37,13 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
 
-      # List build output files to verify the build was successful
-      - name: List build output
-        run: ls -la .vitepress/dist
+      # Debug step to check the contents of the deployment directory
+      - name: Debug build output
+        run: |
+          echo "Listing contents of the current directory:"
+          ls -la
+          echo "Listing contents of the .vitepress/dist directory:"
+          ls -la .vitepress/dist
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
@@ -47,4 +51,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ../.vitepress/dist
+          publish_dir: .vitepress/dist
