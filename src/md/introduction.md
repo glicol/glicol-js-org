@@ -4,7 +4,7 @@ Glicol.js is the audio engine of [`Glicol computer music language`](https://glic
 
 ### Advantages
 
-- A super light-weight package (Glicol.js is 2MB whereas Tone.js is 11MB).
+- A super light-weight package (Glicol.js is 2.2MB and 1.4MB in the next version whereas Tone.js is 5.4 MB).
 
 - Ceiling-level audio performance in browsers: do any heavy stuff on main thread without influencing the audio; no garbage-collection in audio thread; no memory leaking.
 
