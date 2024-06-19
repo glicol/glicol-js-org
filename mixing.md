@@ -1,4 +1,4 @@
-## Mixing
+# Mixing
 
 So far, there are not so many built-in effect with Glicol.
 
@@ -8,9 +8,9 @@ To use the reverb, the easiest way is to use the `mix` node.
 
 ```js
 glicol.play({
-    '~t1': seq('60 60 60 60').sp('808bd').mul(0.5),
-    '~t2': seq('60 _ 67 _63').sp('guitar').lpf(1800, 1).mul(0.5),
-    o: mix('~t1 ~t2').plate(0.1),
+  "~t1": seq("60 60 60 60").sp("808bd").mul(0.5),
+  "~t2": seq("60 _ 67 _63").sp("guitar").lpf(1800, 1).mul(0.5),
+  o: mix("~t1 ~t2").plate(0.1),
 });
 ```
 
@@ -18,9 +18,9 @@ Note how the `mix` use `..` as a syntax sugar. The example above is equivalant t
 
 ```js
 glicol.play({
-    '~t1': seq('60 60 60 60').sp('808bd').mul(0.5),
-    '~t2': seq('60 _ 67 _63').sp('guitar').lpf(1800, 1).mul(0.5),
-    o: mix('~t1 ~t2').plate(0.1),
+  "~t1": seq("60 60 60 60").sp("808bd").mul(0.5),
+  "~t2": seq("60 _ 67 _63").sp("guitar").lpf(1800, 1).mul(0.5),
+  o: mix("~t1 ~t2").plate(0.1),
 });
 ```
 

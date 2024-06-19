@@ -1,10 +1,10 @@
-## Samples
+# Samples
 
 By setting the `loadSamples` entry to `true`, you can get some automatically loaded samples.
 
 ```js
-import Glicol from 'glicol';
-import { seq } from 'glicol';
+import Glicol from "glicol";
+import { seq } from "glicol";
 
 const glicol = new Glicol({
   loadSamples: true,
@@ -17,7 +17,7 @@ Call `glicol.showAllSamples()` to see them in the console.
 
 You play samples by using the `sp` node (sample-playback).
 
-It's triggered by any non-zero value: 1.0 will trigger the normal speed playback. 
+It's triggered by any non-zero value: 1.0 will trigger the normal speed playback.
 
 2.0 double the speed thus octave higher; 0.5 octave lower.
 
@@ -25,8 +25,8 @@ Thus, the `imp` node is good for a regular triggering:
 
 ```js
 glicol.play({
-    o: imp(1.0).sp('808bd')
-})
+  o: imp(1.0).sp("808bd"),
+});
 ```
 
 ### The sequencer(seq) node
@@ -37,9 +37,9 @@ The "seq" node takes unlimited number of parameters called "notes", seperated by
 
 These "notes" will equally divide one bar music.
 
-Note can be midi number, rest _, or compound note such as _60.
+Note can be midi number, rest \_, or compound note such as \_60.
 
-Compound notes are further equally divided by the total number of midi(note) and rest(_)
+Compound notes are further equally divided by the total number of midi(note) and rest(\_)
 
 I will cover how to make more complicated sequence pattern later.
 
