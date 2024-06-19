@@ -1,3 +1,5 @@
+# This is a basic workflow to help you get started with Actions
+
 name: CI
 
 # Controls when the workflow will run
@@ -23,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Setup pnpm
+      # Setup Node.js environment
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
@@ -45,4 +47,9 @@ jobs:
       - name: List dist folder contents
         run: ls -la dist
 
-      # You can add additional steps here, such as deployment steps, if needed
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
