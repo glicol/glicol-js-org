@@ -6,7 +6,8 @@ export default defineConfig({
   description: "glicol language shipped in js for browsers",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-
+    logo: '/logo.png',
+    siteTitle: 'glicol.js',
     sidebar: [
       {
         items: [
@@ -24,7 +25,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/chaosprint/glicol' }
     ]
   }
 })
