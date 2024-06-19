@@ -4,9 +4,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20' # Specify the Node.js version
+          node-version: "20" # Specify the Node.js version
 
       # Install dependencies
       - name: Install dependencies
@@ -37,9 +37,14 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
 
+      # List build output files to verify the build was successful
+      - name: List build output
+        run: ls -la .vitepress/dist
+
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./.vitepress/dist
+          publish_branch: gh-pages
+          publish_dir: .vitepress/dist

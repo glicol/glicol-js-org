@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "glicol.js",
   description: "glicol language shipped in js for browsers",
+  base: "/glicol-js-org",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
