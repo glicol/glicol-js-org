@@ -32,9 +32,13 @@ jobs:
           node-version: '16'
           cache: 'pnpm'
 
-      # Install pnpm
+      # Install pnpm using curl
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+
+      # Add pnpm to PATH
+      - name: Add pnpm to PATH
+        run: export PATH="~/.local/share/pnpm:$PATH"
 
       # Verify pnpm installation
       - name: Verify pnpm installation
