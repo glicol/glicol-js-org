@@ -38,6 +38,7 @@ jobs:
             git checkout gh-pages
           else
             git checkout -b gh-pages
+            git push origin gh-pages
           fi
           rsync -av --delete ../.vitepress/dist/ .
           echo "glicol.js.org" > CNAME  # Add CNAME file
