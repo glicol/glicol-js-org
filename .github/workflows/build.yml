@@ -30,15 +30,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-          cache: 'pnpm'
+          cache: 'npm'
 
-      # Install pnpm using curl
+      # Install pnpm using npm
       - name: Install pnpm
-        run: curl -fsSL https://get.pnpm.io/install.sh | sh -
-
-      # Add pnpm to PATH
-      - name: Add pnpm to PATH
-        run: export PATH="~/.local/share/pnpm:$PATH"
+        run: npm install -g pnpm
 
       # Verify pnpm installation
       - name: Verify pnpm installation
