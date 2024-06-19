@@ -32,21 +32,13 @@ jobs:
           node-version: '16'
           cache: 'npm'
 
-      # Install pnpm using npm
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      # Verify pnpm installation
-      - name: Verify pnpm installation
-        run: pnpm --version
-
-      # Install dependencies
+      # Install dependencies using npm
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
-      # Build the project
+      # Build the project using npm
       - name: Build the project
-        run: pnpm build
+        run: npm run build
 
       # Optional: List the contents of the dist folder to verify the build
       - name: List dist folder contents
