@@ -20,7 +20,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Check out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
       # Set up Node.js environment
@@ -37,13 +37,9 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
 
-      # Debug step to check the contents of the deployment directory
-      - name: Debug build output
-        run: |
-          echo "Listing contents of the current directory:"
-          ls -la
-          echo "Listing contents of the .vitepress/dist directory:"
-          ls -la .vitepress/dist
+      # List build output files to verify the build was successful
+      - name: List build output
+        run: ls -la .vitepress/dist
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
