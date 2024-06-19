@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as t,a1 as l}from"./chunks/framework.aHVR0oKy.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"livecoding.md","filePath":"livecoding.md"}'),n={name:"livecoding.md"},o=l("",12),s=[o];function i(p,c,r,d,h,u){return t(),e("div",null,s)}const b=a(n,[["render",i]]);export{g as __pageData,b as default};

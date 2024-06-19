@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as e}from"./chunks/framework.aHVR0oKy.js";const E=JSON.parse('{"title":"Glicol DSL","description":"","frontmatter":{},"headers":[],"relativePath":"dsl.md","filePath":"dsl.md"}'),t={name:"dsl.md"},l=e("",14),n=[l];function p(h,o,d,r,c,k){return a(),i("div",null,n)}const u=s(t,[["render",p]]);export{E as __pageData,u as default};

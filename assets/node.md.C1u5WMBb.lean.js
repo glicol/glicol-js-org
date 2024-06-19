@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as n}from"./chunks/framework.aHVR0oKy.js";const g=JSON.parse('{"title":"As a Web Audio Node","description":"","frontmatter":{},"headers":[],"relativePath":"node.md","filePath":"node.md"}'),t={name:"node.md"},e=n("",3),l=[e];function h(p,k,o,d,r,c){return a(),i("div",null,l)}const y=s(t,[["render",h]]);export{g as __pageData,y as default};

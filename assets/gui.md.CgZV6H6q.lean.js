@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as n}from"./chunks/framework.aHVR0oKy.js";const F=JSON.parse('{"title":"GUI","description":"","frontmatter":{},"headers":[],"relativePath":"gui.md","filePath":"gui.md"}'),h={name:"gui.md"},l=n("",5),t=[l];function k(p,e,E,r,d,g){return a(),i("div",null,t)}const o=s(h,[["render",k]]);export{F as __pageData,o as default};

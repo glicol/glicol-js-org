@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as t}from"./chunks/framework.aHVR0oKy.js";const y=JSON.parse('{"title":"Mixing","description":"","frontmatter":{},"headers":[],"relativePath":"mixing.md","filePath":"mixing.md"}'),h={name:"mixing.md"},k=t("",9),n=[k];function l(p,e,E,r,d,g){return a(),i("div",null,n)}const F=s(h,[["render",l]]);export{y as __pageData,F as default};

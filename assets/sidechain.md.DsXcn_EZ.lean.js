@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as t,a1 as n}from"./chunks/framework.aHVR0oKy.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"sidechain.md","filePath":"sidechain.md"}'),s={name:"sidechain.md"},l=n("",12),o=[l];function i(p,c,r,d,h,u){return t(),e("div",null,o)}const b=a(s,[["render",i]]);export{g as __pageData,b as default};

@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as t}from"./chunks/framework.aHVR0oKy.js";const c=JSON.parse('{"title":"ADSR","description":"","frontmatter":{},"headers":[],"relativePath":"adsr.md","filePath":"adsr.md"}'),h={name:"adsr.md"},n=t("",12),e=[n];function l(p,k,d,E,r,o){return a(),i("div",null,e)}const y=s(h,[["render",l]]);export{c as __pageData,y as default};

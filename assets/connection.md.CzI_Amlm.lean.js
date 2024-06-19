@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as n}from"./chunks/framework.aHVR0oKy.js";const g=JSON.parse('{"title":"Connection","description":"","frontmatter":{},"headers":[],"relativePath":"connection.md","filePath":"connection.md"}'),t={name:"connection.md"},h=n("",8),l=[h];function e(p,k,o,r,d,E){return a(),i("div",null,l)}const y=s(t,[["render",e]]);export{g as __pageData,y as default};
