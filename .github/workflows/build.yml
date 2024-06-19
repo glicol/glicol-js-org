@@ -34,7 +34,11 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git clone --depth=1 https://github.com/${{ github.repository }} gh-pages
           cd gh-pages
-          git checkout -b gh-pages || git checkout gh-pages
+          if git rev-parse --verify origin/gh-pages; then
+            git checkout gh-pages
+          else
+            git checkout -b gh-pages
+          fi
           rsync -av --delete ../.vitepress/dist/ .
           echo "glicol.js.org" > CNAME  # Add CNAME file
           git add --all
