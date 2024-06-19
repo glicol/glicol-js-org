@@ -1,6 +1,5 @@
 name: CI
 
-# Controls when the workflow will run
 on:
   push:
     branches: ["main"]
@@ -31,6 +30,8 @@ jobs:
 
       - name: Ensure gh-pages branch exists
         run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           if git show-ref --verify --quiet refs/heads/gh-pages; then
             echo "Branch gh-pages already exists."
           else
