@@ -32,8 +32,13 @@ jobs:
           node-version: '16'
           cache: 'pnpm'
 
+      # Install pnpm
       - name: Install pnpm
         run: npm install -g pnpm
+
+      # Verify pnpm installation
+      - name: Verify pnpm installation
+        run: pnpm --version
 
       # Install dependencies
       - name: Install dependencies
