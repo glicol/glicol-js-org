@@ -33,7 +33,7 @@ glicol.play({
 
 However, a more usefull tool is the `seq` node.
 
-The "seq" node takes unlimited number of parameters called "notes", seperated by spaces.
+The "seq" node takes unlimited number of parameters called "notes", separated by spaces.
 
 These "notes" will equally divide one bar music.
 
