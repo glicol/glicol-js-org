@@ -59,7 +59,7 @@ glicol.play({
 
 The engine will analyse the difference and only update those nodes modified.
 
-> This is the key for the what-you-see-if-what-you-get style. We have done the hard work on the engine so you don't have to manually manage all the nodes and connect them everywhere.
+> This is the key for the what-you-see-is-what-you-get style. We have done the hard work on the engine so you don't have to manually manage all the nodes and connect them everywhere.
 
 A lighter way to do it is to write:
 

@@ -17,7 +17,7 @@ export default defineConfig({
           { text: 'gui', link: '/gui' },
           { text: 'use samples', link: '/use-samples' },
           { text: 'mixing', link: '/mixing' },
-          { text: 'adsr envlope', link: '/adsr' },
+          { text: 'adsr envelope', link: '/adsr' },
           { text: 'use dsl', link: '/dsl' },
           { text: 'as web audio node', link: '/node' }
         ]
